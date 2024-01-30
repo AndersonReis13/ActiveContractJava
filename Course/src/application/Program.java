@@ -47,6 +47,12 @@ public class Program {
 			
 			worker.addContract(contract);
 		}
+
+			System.out.println();
+		System.out.print("Digite o mês para calcular o total (MM/yyyy: ");
+		String monthAndYear = sc.next();
+		int month = Integer.parseInt(monthAndYear.substring(0, 2));// transformando uma string em um número, para assim consegui passar como data)
+		int year = Integer.parseInt(monthAndYear.substring(3));
 		
 	
 		
