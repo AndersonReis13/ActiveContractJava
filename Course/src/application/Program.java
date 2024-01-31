@@ -54,7 +54,9 @@ public class Program {
 		int month = Integer.parseInt(monthAndYear.substring(0, 2));// transformando uma string em um número, para assim consegui passar como data)
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		
-	
+		System.out.print("Nome: " + worker.getName());
+		System.out.print("Departamento: " + worker.getDepartament().getName());
+		System.out.print("Valor total: " + monthAndYear + " " +  String.format("%.2f", worker.income(year, month)));
 		
 		sc.close();
 	}

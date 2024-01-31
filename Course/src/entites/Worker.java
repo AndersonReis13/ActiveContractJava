@@ -10,10 +10,12 @@ public class Worker {
 	private String name;
 	private WorkedLevel level;
 	private Double baseSalary;
-	
-	private Departament departament = new Departament();
-	private List<HourContract> contracts = new ArrayList<>();
-	
+
+
+
+	private Departament departament = new Departament(); // Como é de UM para muitos, só pode existir apenas um "deparmento"
+	private List<HourContract> contracts = new ArrayList<>(); // de muitos para muitos.
+
 	public Worker() {
 	}
 
@@ -51,6 +53,15 @@ public class Worker {
 	public void setBaseSalary(Double baseSalary) {
 		this.baseSalary = baseSalary;
 	}
+
+	public Departament getDepartament() {
+		return departament;
+	}
+
+	public void setDepartament(Departament departament) {
+		this.departament = departament;
+	}
+
 	
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
@@ -59,6 +70,8 @@ public class Worker {
 	public void removeContract(HourContract contract) {
 		contracts.remove(contract);
 	}
+
+
 	
 	public double income(int year, int month) {
 		double som = baseSalary;
